@@ -1,6 +1,7 @@
 /bootstrap/compiled.php
 /bower_components
 /nbproject
+/node_modules
 /vendor
 composer.phar
 composer.lock

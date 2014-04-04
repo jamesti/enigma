@@ -1,0 +1,23 @@
+{
+  "name": "Enigma Project",
+  "version": "0.0.1",
+  "description": "Projeto Enigma",
+  "main": "index.php",
+  "keywords": [
+    "php"
+  ],
+  "authors": [
+    "James Moreira"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.1.1"
+  }
+}

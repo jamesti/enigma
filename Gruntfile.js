@@ -20,12 +20,15 @@ module.exports = function(grunt) {
 			'<%= grunt.template.today("yyyy-mm-dd") %> */',
 		},
 		dist: {
-		  src: ['assets/js/*.min.js'],
-		  dest: 'assets/dist/built.min.js',
+		  src: ['bower_components/jquery/dist/jquery.min.js',
+                        'bower_components/jquery.ui/dist/jquery-ui.min.js',
+                        'bower_components/bootstrap/dist/js/bootstrap.min.js'],
+		  dest: 'public/dist/built.min.js',
 		},
 		extras: {
-		  src: ['assets/css/*.min.css'],
-		  dest: 'assets/dist/built.min.css',
+		  src: ['bower_components/bootstrap/dist/css/bootstrap.min.css',
+                        'bower_components/jquery.ui/dist/jquery-ui.min.css'],
+		  dest: 'public/dist/built.min.css',
 		},
 	  },
           
@@ -46,9 +49,9 @@ module.exports = function(grunt) {
 	// Load the plugin that provides the "concat" task. 
 	grunt.loadNpmTasks('grunt-contrib-concat');
         
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
+        grunt.loadNpmTasks('grunt-contrib-cssmin');
         
 	// Default task(s).
-	grunt.registerTask('default', ['uglify','cssmin','concat']);
+	grunt.registerTask('default', ['concat']);
 
 };

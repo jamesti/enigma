@@ -16,11 +16,13 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::get('users', function()
+Route::get('about', function()
 {
-    $users = User::all();
-
-    return View::make('users')->with('users', $users);
+    return View::make('about');
 });
+
+Route::get('contact', 'Pages@contact');
+
+Route::resource('users', 'UserController');
 
 //Route::get('users', 'UserController@getIndex');

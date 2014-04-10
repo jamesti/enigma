@@ -40,6 +40,8 @@ array($user->id), array('class' => 'btn btn-info')) }}</td>
     </tbody>
 </table>
 
+{{ $users->links() }}
+
 @else
 
 Não há registro de usuários!
